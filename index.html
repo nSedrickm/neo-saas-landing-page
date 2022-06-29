@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Neo, best HTML5 TailwindCSS SaaS startup and business landing page, mobile responsive, WCAG 2.1 accessibility compliant. built by nsedrickm, get started today "
+    />
+    <link href="./styles/main.css" rel="stylesheet" />
+    <link href="./styles/custom.css" rel="stylesheet" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="./icons/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./icons/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="./icons/favicon-16x16.png"
+    />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <script src="./js/menu.js" defer></script>
+    <title>Neo HTML5 TailwindCSS SaaS landing page</title>
+  </head>
+  <body class="text-base leading-normal md:text-xl scroll-smooth">
+    <!-- main navigation-->
+    <header class="items-center justify-between hidden px-16 py-8 lg:flex">
+      <span class="flex items-center space-x-4 text-3xl">
+        <img src="images/logo.svg" alt="logo" class="overflow-hidden" />
+        <span class="font-bold">Neo</span>
+      </span>
+      <nav class="flex items-center space-x-8 text-base">
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">The Team</a>
+        <a href="#">Portfolio</a>
+        <a href="#" class="px-4 py-2 text-white bg-primary rounded-3xl">
+          Get in touch
+        </a>
+      </nav>
+    </header>
+
+    <!-- mobile  navigation-->
+    <header class="sticky inset-x-0 top-0 z-50 bg-white lg:hidden">
+      <div class="flex items-center justify-between p-4 md:p-8">
+        <span class="flex items-center space-x-4 text-xl md:text-4xl">
+          <img src="images/logo.svg" alt="logo" class="overflow-hidden" />
+          <span class="font-bold">Neo</span>
+        </span>
+
+        <button
+          class="appearance-none"
+          id="menu-toggle"
+          title="open menu"
+          onclick="openMenu()"
+        >
+          <svg viewBox="0 0 100 80" width="30" height="30">
+            <rect width="100" height="10"></rect>
+            <rect y="30" width="100" height="10"></rect>
+            <rect y="60" width="100" height="10"></rect>
+          </svg>
+        </button>
+
+        <button
+          class="hidden text-3xl leading-none appearance-none md:text-5xl"
+          id="menu-toggle-close"
+          title="close menu"
+          onclick="closeMenu()"
+        >
+          &times;
+        </button>
+      </div>
+
+      <nav
+        id="menu-nav"
+        class="flex-col items-center hidden w-screen h-screen py-10 space-y-10 transition-opacity duration-700 ease-in-out opacity-0"
+      >
+        <a href="#">About Us</a>
+        <a href="#">Our Services</a>
+        <a href="#">The Team</a>
+        <a href="#">Portfolio</a>
+        <a href="#" class="px-4 py-2 text-white bg-primary rounded-3xl">
+          Get in touch
+        </a>
+      </nav>
+    </header>
+
+    <!-- hero -->
+    <section class="grid grid-cols-2 p-8 my-20 place-items-center md:px-16">
+      <div class="mb-16 col-span-full lg:col-span-1 lg:mb-0">
+        <p class="flex items-center space-x-2 text-primary">
+          <img src="images/star-icon.svg" alt="star icon" />
+          <span>Jump start your growth</span>
+        </p>
+        <br />
+        <h1
+          class="text-3xl font-bold leading-normal tracking-wide md:text-5xl lg:text-5xl"
+        >
+          We boost the growth for
+          <span class="leading-normal text-primary">Startups</span>
+          to Fortune 500 companies
+          <img class="inline" src="images/clock-icon.svg" alt="clock icon" />
+        </h1>
+        <br />
+        <p class="my-4 leading-normal">
+          Get the most accurate leads, sales people training and conversions,
+          tools and more all within the same one billing.
+        </p>
+
+        <form
+          class="flex flex-col my-8 space-y-4 sm:space-x-2 sm:space-y-0 sm:flex-row"
+        >
+          <input
+            class="p-5 -skew-x-12 border border-gray-300 rounded-xl"
+            id="email"
+            type="email"
+            placeholder="Email address"
+          />
+          <button
+            title="send"
+            class="px-16 py-6 text-white -skew-x-12 md:py-5 bg-primary rounded-xl"
+          >
+            <img class="mx-auto" src="images/arrowup.svg" alt="send email" />
+          </button>
+        </form>
+      </div>
+      <div class="col-span-full lg:col-span-1">
+        <img class="" src="images/hero.svg" alt="our workplace" />
+      </div>
+    </section>
+
+    <!-- brands -->
+    <section
+      class="flex flex-col flex-wrap items-center max-w-screen-xl p-8 mx-auto my-8 space-y-10 md:flex-row lg:space-y-0 md:space-x-10 md:px-16 md:justify-between"
+    >
+      <img class="inline-block" src="images/partners.svg" alt="partners" />
+      <img class="inline-block" src="images/slack.svg" alt="slack" />
+      <img class="inline-block" src="images/amazon.svg" alt="amazon" />
+      <img
+        class="inline-block"
+        src="images/woo-commerce.svg"
+        alt="woo commerce"
+      />
+      <img class="inline-block" src="images/sitepoint.svg" alt="sitepoint" />
+    </section>
+
+    <!-- Goals  -->
+    <section
+      class="grid items-start grid-cols-3 gap-10 p-8 py-20 my-20 md:px-16 bg-secondary-200"
+    >
+      <header class="mb-10 col-span-full lg:col-span-1 lg:mb-0">
+        <p class="mb-4 tracking-widest">ACHIEVE MORE</p>
+        <h2 class="text-3xl font-semibold leading-normal">
+          Purpose of a convoy is to keep your team
+        </h2>
+      </header>
+      <div class="col-span-full lg:col-span-1">
+        <div class="flex items-start space-x-6">
+          <img src="images/chart-Icon.svg" alt="graph" />
+          <div>
+            <h3 class="mb-4 text-2xl font-bold">Build for impact</h3>
+            <p class="leading-loose">
+              We identify and nurture a truly diverse team of designers,
+              developers and marketers
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-span-full lg:col-span-1">
+        <div class="flex items-start space-x-6">
+          <img src="images/sync-icon.svg" alt="graph" />
+          <div>
+            <h3 class="mb-4 text-2xl font-bold">In Sync with you</h3>
+            <p class="leading-loose">
+              We work the way you do by adapting to your workflows and rhythm we
+              aim to blend in for a seamless.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Business and Partners -->
+    <section class="p-8 my-20 text-center md:px-16">
+      <header class="mb-8">
+        <h2
+          class="mb-8 text-3xl font-bold leading-normal tracking-wide text-center md:text-4xl"
+        >
+          How can we help your business ?
+        </h2>
+        <p class="leading-normal">
+          When you resell besnik, you build trust and increase
+        </p>
+      </header>
+
+      <!-- card grid -->
+      <div class="grid grid-cols-3 gap-10 my-20 place-items-center">
+        <div
+          class="w-full h-full px-10 py-20 border col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img
+            src="images/search-Icon.svg"
+            alt="search icon"
+            class="inline mb-10"
+          />
+          <h3 class="mb-8 text-2xl font-semibold">Find out what you need</h3>
+          <p class="leading-normal text-gray-600">
+            We present you a proposal and discuss nitty- gritty like
+          </p>
+        </div>
+        <div
+          class="w-full h-full px-10 py-20 border col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img src="images/cog-icon.svg" alt="cog icon" class="inline mb-10" />
+          <h3 class="mb-8 text-2xl font-semibold">Work out the details</h3>
+          <p class="leading-normal text-gray-600">
+            Communication protocols apart from engagement models
+          </p>
+        </div>
+        <div
+          class="w-full h-full px-10 py-20 border col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img
+            src="images/rocket-Icon.svg"
+            alt="rocket icon"
+            class="inline mb-10"
+          />
+          <h3 class="mb-8 text-2xl font-semibold">We get to work fast</h3>
+          <p class="leading-normal text-gray-600">
+            Protocols apart from engage models, pricing billing
+          </p>
+        </div>
+      </div>
+
+      <button
+        class="px-12 py-6 text-white bg-primary rounded-[4rem] hover:shadow-primary shadow-xl"
+      >
+        Become a partner
+      </button>
+    </section>
+
+    <!-- Schedule and Monitors -->
+    <section
+      class="grid grid-cols-2 gap-10 p-8 my-20 md:px-16 place-items-center"
+    >
+      <div class="col-span-full lg:col-span-1">
+        <p class="mb-8 font-bold text-xl text-[#e57600]">SCHEDULE</p>
+        <h2
+          class="mb-8 text-3xl font-bold leading-normal tracking-wide lg:text-4xl"
+        >
+          Great customer relationships start here
+        </h2>
+        <p class="mb-10 leading-loose">
+          80 days around the world, we’ll find a pot of gold just sitting where
+          the rainbow’s ending. Time — we’ll fight against the time, and we’ll
+          fly on the white wings of the wind.
+        </p>
+        <a href="#" class="flex items-center space-x-8 text-link">
+          <span>learn more about publishing </span>
+          <img src="images/arrow-right.svg" alt="arrow right" />
+        </a>
+      </div>
+      <div class="col-span-full lg:col-span-1">
+        <img
+          class="ml-auto"
+          src="images/customer-statistics.svg"
+          alt="customer-statistics"
+        />
+      </div>
+
+      <div class="col-span-full lg:col-span-1 order-0 lg:order-1">
+        <p class="mb-8 font-bold text-xl text-[#11a66d]">MONITOR</p>
+        <h2
+          class="mb-8 text-3xl font-bold leading-normal tracking-wide lg:text-4xl"
+        >
+          Introducing best mobile carousels
+        </h2>
+        <p class="mb-10 leading-loose">
+          Before the ship is really back. Round, round, all around the world.
+          Round, all around the world. Round, all around the world. Round, all
+          around the world.
+        </p>
+        <a href="#" class="flex items-center space-x-8 text-link">
+          <span>learn more monitoring</span>
+          <img src="images/arrow-right.svg" alt="arrow right" />
+        </a>
+      </div>
+
+      <div class="col-span-full lg:col-span-1">
+        <img class="ml-auto" src="images/monitoring.svg" alt="monitoring" />
+      </div>
+    </section>
+
+    <!-- Pricing -->
+    <section class="px-8 py-20 md:px-16 md:py-40 bg-background-lightblue">
+      <div
+        class="px-8 py-16 mx-auto text-center bg-white shadow-lg rounded-xl lg:w-3/5"
+      >
+        <h2
+          class="mb-12 text-3xl font-bold leading-normal tracking-wide md:text-4xl"
+        >
+          Pricing
+        </h2>
+        <div class="flex items-center justify-center space-x-10 md:space-x-40">
+          <div>
+            <h3 class="mb-4 text-2xl text-gray-500">Starter</h3>
+            <p class="text-2xl font-semibold">$4,000/mo</p>
+          </div>
+          <div>
+            <h3 class="mb-4 text-2xl text-gray-500">Business</h3>
+            <p class="text-2xl font-semibold">$7,500/mo</p>
+          </div>
+        </div>
+
+        <div class="flex items-center justify-center mx-8 my-20 space-x-4">
+          <span>1</span>
+          <input
+            aria-label="products"
+            type="range"
+            min="0"
+            step="1"
+            max="5"
+            value="1"
+            class="h-5 bg-gray-700 appearance-none md:w-2/3 rounded-2xl"
+          />
+          <span>50</span>
+        </div>
+
+        <div
+          class="flex flex-col items-center justify-around mx-auto space-x-2 space-y-4 md:space-y-0 md:flex-row md:w-3/5"
+        >
+          <p>Ready to get started?</p>
+          <button class="px-6 py-4 text-white rounded-xl bg-primary">
+            Get started
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <!-- support -->
+    <section class="grid items-center grid-cols-2 gap-10 p-8 py-20 md:px-16">
+      <div class="mb-10 col-span-full lg:col-span-1 lg:mb-0">
+        <h2
+          class="mb-8 text-3xl font-bold leading-normal tracking-wide md:text-4xl"
+        >
+          Future of support with new shape
+        </h2>
+        <p class="mb-8 leading-loose">
+          Discuss your goals, determine success metrics, identify problems
+        </p>
+
+        <div class="mb-12">
+          <p class="flex items-center mb-2 space-x-2">
+            <img src="images/check-circle.svg" alt="check icon" />
+            <span>UX design content strategy</span>
+          </p>
+
+          <p class="flex items-center space-x-2">
+            <img src="images/check-circle.svg" alt="check icon" />
+            <span>Development team</span>
+          </p>
+        </div>
+
+        <button
+          class="px-16 py-6 text-white bg-primary rounded-[4rem] hover:shadow-primary shadow-xl"
+        >
+          Get started
+        </button>
+      </div>
+
+      <div class="col-span-full lg:col-span-1">
+        <div class="grid grid-cols-2 gap-10 lg:p-10">
+          <div
+            class="p-10 border col-span-full md:col-span-1 rounded-3xl hover:shadow-xl"
+          >
+            <img
+              src="images/stack-icon.svg"
+              alt="stack icon"
+              class="inline mb-10"
+            />
+            <h3 class="mb-8 text-2xl font-semibold">Web design</h3>
+            <p class="mb-8 leading-normal text-gray-600">
+              One for all and all for one, We are always ready.
+            </p>
+            <a href="#" class="font-bold text-purple-900">LEARN MORE</a>
+          </div>
+          <div
+            class="p-10 border col-span-full md:col-span-1 rounded-3xl hover:shadow-xl"
+          >
+            <img
+              src="images/bulb-icon.svg"
+              alt="bulb icon"
+              class="inline mb-10"
+            />
+            <h3 class="mb-8 text-2xl font-semibold">Ad-creatives</h3>
+            <p class="mb-8 leading-normal text-gray-600">
+              Alphabet Village and the subline of her own road.
+            </p>
+            <a href="#" class="font-bold text-purple-900">LEARN MORE</a>
+          </div>
+          <div
+            class="p-10 border col-span-full md:col-span-1 rounded-3xl hover:shadow-xl"
+          >
+            <img
+              src="images/cog-alt-icon.svg"
+              alt="cog icon"
+              class="inline mb-10"
+            />
+            <h3 class="mb-8 text-2xl font-semibold">Automation</h3>
+            <p class="mb-8 leading-normal text-gray-600">
+              Little Blind Text should turn around and return.
+            </p>
+            <a href="#" class="font-bold text-purple-900">LEARN MORE</a>
+          </div>
+          <div
+            class="p-10 border col-span-full md:col-span-1 rounded-3xl hover:shadow-xl"
+          >
+            <img
+              src="images/pie-icon.svg"
+              alt="pie icon"
+              class="inline mb-10"
+            />
+            <h3 class="mb-8 text-2xl font-semibold">Infographics</h3>
+            <p class="mb-8 leading-normal text-gray-600">
+              Nothing the copy said could convince her.
+            </p>
+            <a href="#" class="font-bold text-purple-900">LEARN MORE</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Reviews -->
+    <section class="p-8 my-20 text-center md:px-16">
+      <header class="mb-10">
+        <h2
+          class="mb-4 text-3xl font-bold leading-normal tracking-wide text-center md:text-4xl"
+        >
+          What our clients say
+        </h2>
+        <p class="leading-normal">
+          Things that make it the best place to start trading
+        </p>
+      </header>
+
+      <!-- card grid -->
+      <div class="grid grid-cols-3 gap-10 mb-10">
+        <div
+          class="w-full h-full px-4 py-20 col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img
+            src="images/person-one.svg"
+            alt="person icon"
+            class="inline mb-8"
+          />
+          <img
+            src="images/stars-icon.svg"
+            alt="person icon"
+            class="mx-auto mb-4"
+          />
+          <h3 class="mb-8 text-2xl font-semibold">Robin Ayala</h3>
+          <p class="leading-normal text-gray-600">
+            From the countries Vokalia and Consonantia, there live the blind
+            texts. Separated they live in Bookmarksgrove right at the coast.
+          </p>
+        </div>
+        <div
+          class="w-full h-full px-4 py-20 col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img
+            src="images/person-two.svg"
+            alt="person icon"
+            class="inline mb-8"
+          />
+          <img
+            src="images/stars-icon.svg"
+            alt="person icon"
+            class="mx-auto mb-4"
+          />
+          <h3 class="mb-8 text-2xl font-semibold">John De marli</h3>
+          <p class="leading-normal text-gray-600">
+            Far far away, behind the word mountains, far from the countries
+            Vokalia and Consonantia, there live the blind texts. Separated they
+            live in Bookmarksgrove.
+          </p>
+        </div>
+        <div
+          class="w-full h-full px-4 py-20 col-span-full lg:col-span-1 rounded-3xl hover:shadow-xl"
+        >
+          <img
+            src="images/person-three.svg"
+            alt="person icon"
+            class="inline mb-8"
+          />
+          <img
+            src="images/stars-icon.svg"
+            alt="person icon"
+            class="mx-auto mb-4"
+          />
+          <h3 class="mb-8 text-2xl font-semibold">Rowhan Smith</h3>
+          <p class="leading-normal text-gray-600">
+            Protocols apart from engage models, pricing billingWhen she reached
+            the first hills of the Italic Mountains, she had a last view back on
+            the skyline of her hometown Bookmarksgrove, the headline
+          </p>
+        </div>
+      </div>
+
+      <div class="flex items-center justify-center space-x-2">
+        <img src="images/back-icon.svg" alt="back icon" class="inline mb-8" />
+        <img
+          src="images/forward-icon.svg"
+          alt="forward icon"
+          class="inline mb-8"
+        />
+      </div>
+    </section>
+
+    <!-- newsletter -->
+    <section
+      class="flex flex-col items-stretch justify-between p-8 mx-4 my-20 text-center text-white md:items-center lg:text-left lg:space-x-4 md:p-20 lg:flex-row md:mx-auto md:w-3/4 bg-gradient-to-br from-background-mediumblue via-background-mediumblue to-primary rounded-3xl"
+    >
+      <div>
+        <h3 class="mb-8 text-3xl font-bold md:text-4xl">
+          Subscribe to our newsletter
+        </h3>
+        <p class="leading-normal">
+          The copy warned the Little Blind Text, that where it came from it
+          would have been rewritten.
+        </p>
+      </div>
+
+      <form class="flex flex-col my-8 space-y-4 md:space-y-0 md:flex-row">
+        <input
+          class="p-5 border border-gray-300 rounded-xl md:rounded-none md:rounded-l-xl"
+          id="newsletter-email"
+          type="email"
+          placeholder="Email address"
+        />
+        <button
+          title="send"
+          class="flex items-center justify-center p-5 space-x-2 text-white md:bg-background-green rounded-xl md:rounded-none md:rounded-r-xl"
+          type="submit"
+        >
+          <span>Discover</span>
+          <img
+            class="inline-block"
+            src="images/forward-icon-alt.svg"
+            alt="send email"
+          />
+        </button>
+      </form>
+    </section>
+
+    <footer class="p-8 md:mt-40 md:px-16 bg-background-gray">
+      <div class="grid grid-cols-1 gap-8 pt-10 lg:grid-cols-3">
+        <div>
+          <span class="flex items-center space-x-2 text-2xl">
+            <img src="images/logo.svg" alt="logo" class="overflow-hidden" />
+            <span class="font-bold">Neo</span>
+          </span>
+
+          <p class="max-w-xs mt-4 text-gray-600">
+            The copy warned the Little Blind Text, that where it came from it
+            would have been rewritten a thousand times.
+          </p>
+
+          <div class="flex mt-8 space-x-6 text-gray-600">
+            <a
+              class="hover:opacity-75"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="sr-only"> Facebook </span>
+              <img src="images/Facebook-icon.svg" alt="facebook-icon" />
+            </a>
+            <a
+              class="hover:opacity-75"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="sr-only">Twitter </span>
+              <img src="images/twitter-icon.svg" alt="twitter-icon" />
+            </a>
+            <a
+              class="hover:opacity-75"
+              href="#"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <span class="sr-only"> linkedin </span>
+              <img src="images/linkedin-icon.svg" alt="linkedin-icon" />
+            </a>
+          </div>
+        </div>
+
+        <div
+          class="grid grid-cols-1 gap-8 lg:col-span-2 sm:grid-cols-2 lg:grid-cols-4"
+        >
+          <div>
+            <h4 class="font-bold">Company</h4>
+            <nav class="flex flex-col mt-4 space-y-2 text-gray-600">
+              <a class="hover:opacity-75" href="#"> About </a>
+              <a class="hover:opacity-75" href="#"> Meet the Team </a>
+              <a class="hover:opacity-75" href="#"> History </a>
+              <a class="hover:opacity-75" href="#"> Careers </a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="font-bold">Services</h4>
+            <nav class="flex flex-col mt-4 space-y-2 text-gray-600">
+              <a class="hover:opacity-75" href="#"> 1on1 Coaching </a>
+              <a class="hover:opacity-75" href="#"> Company Review </a>
+              <a class="hover:opacity-75" href="#"> Accounts Review </a>
+              <a class="hover:opacity-75" href="#"> HR Consulting </a>
+              <a class="hover:opacity-75" href="#"> SEO Optimisation </a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="font-bold">Helpful Links</h4>
+
+            <nav class="flex flex-col mt-4 space-y-2 text-gray-600">
+              <a class="hover:opacity-75" href="#"> Contact </a>
+              <a class="hover:opacity-75" href="#"> FAQs </a>
+              <a class="hover:opacity-75" href="#"> Live Chat </a>
+            </nav>
+          </div>
+
+          <div>
+            <h4 class="font-bold">Legal</h4>
+
+            <nav class="flex flex-col mt-4 space-y-2 text-gray-600">
+              <a class="hover:opacity-75" href="#"> Privacy Policy </a>
+              <a class="hover:opacity-75" href="#"> Terms & Conditions </a>
+              <a class="hover:opacity-75" href="#"> Returns Policy </a>
+              <a class="hover:opacity-75" href="#"> Accessibility </a>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="flex flex-col justify-between py-10 mt-10 space-y-4 text-base text-gray-600 border-t md:flex-row md:space-y-0"
+      >
+        <p>&copy; 2022 Neo</p>
+        <p>
+          <span
+            >Designed by
+            <a
+              class="font-bold text-gray-800 underline"
+              href="https://https://www.arshakir.com/"
+              >Arshakir</a
+            ></span
+          >
+          and
+          <span
+            >developed by
+            <a
+              class="font-bold text-gray-800 underline"
+              href="https://nsedrickm.com"
+              >nsedrickm</a
+            ></span
+          >
+        </p>
+      </div>
+    </footer>
+  </body>
+</html>
